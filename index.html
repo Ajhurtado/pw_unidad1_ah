@@ -7,11 +7,135 @@
 </head>
 <body>
     <!-- Para colocar encabezados-->
-    <h1> Mi primera página WEB  </h1>
-    <h3> Carrera de Computación </h3>
-    <h6> Alexis Hurtado - Jhon Enriquez </h6>
-    <!-- Elemento mostrar parrafo dentro de mi pagina web-->
-     <P> Este es mi primer parrafo de mi página web </P>
-     <button> Aceptar </button>
-</body>
+
+    <header> 
+        <h1> Universidad Central del Ecuador </h1> 
+        <h3> Carrera de Computación </h3>
+
+    </header> 
+    <nav>  </nav> >
+    <section> 
+        <!-- Cabererasde secciones -->
+        <h1> Mi primera página web </h1> 
+        <h6> Alexis Hurtado </h6>
+
+
+        <!-- Elementos para parrafos  -->
+        <p> Este es mi primer parrafo de mi página web </p>
+        <span> Parrafos más cortos </span>
+        <!--P para parrafos normalmente grandes-->
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora inventore est quo corporis. Nemo minus iure quas placeat, odio porro. </p> <!--Me construye un parrafo con 2 -->
+        <!-- Textos -->
+        <strong> Texto de importancia que quiero resaltar </strong> 
+        <br>
+        <br>
+        <br>
+        <b> Texto que no quiero darle relevancia </b> 
+        <br>
+        <em> Texto en cursiva con importancia </em>
+        <br>
+        <i> Texto en cursiva </i>
+        <br>
+        <u> Texto subrayado </u> 
+        <br> <!-- Salto de linea -->      
+        <hr> 
+        <br>
+        <s> Texto eliminado </s>
+        <mark> Texto resaltado </mark>
+
+        <!--Listas-->
+                <!--Sus items si coinciden con el li-->
+        <ul> <!-- Lista sin orden -->
+            <li> Ventas </li>
+            <li> Compras </li>
+            <li> Inventario </li>
+        </ul>
+
+        <ol> <!-- Lista ordenada, coloca un numero a los items -->
+            <li> Ventas </li>
+            <li> Compras </li>
+            <li> Inventario </li>
+        </ol>    
+
+        <!--Tablas-->
+        <table border = "1"> <!-- Tabla -->
+            <thead> 
+                <!--tr siempre primero y representa una fila -->
+                <tr> 
+                    <!-- como contenido de la fila declaro todas las columnas -->
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th> 
+                    <th>CI</th>
+                    <th>Genero</th>
+                    <th>Accion</th>
+                <tr>
+            </thead>
+            <tbody> <!-- Cuerpo de la tabla -->
+                <tr> <!-- Fila de la tabla -->
+                    <td> 1 </td> <!-- Columna de la tabla -->
+                    <td> Alexis </td>
+                    <td> Hurtado </td>
+                    <td>1720807070</td>
+                    <td> Masculino </td>
+                    <td><button>Editar</button></td>
+                </tr>
+            <!--POR CADA FILA ES UN ELEMENTO HTML tr-->    
+                <tr> <!-- Fila de la tabla -->
+                    <td> 2 </td> <!-- Columna de la tabla -->
+                    <td> Jhoel </td>
+                    <td> Pinan </td>
+                    <td>1750246328</td>
+                    <td> Masculino </td>
+                    <td><button>Editar</button></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <!--CONTENEDORES (agrupan contenido)-->
+        <div> <!-- Contenedor general -->
+        </div>     
+        <!--Son contenedores/agrupadores header, nav, section, aside, footer-->
+
+        <!--FORMULARIO-->
+        <form action="">
+            <!--elementos usados dentro-->
+            <label for="id_nombre"> Nombre </label> <!-- Etiqueta para el input -->
+            <input type="text" id="id_nombre"> <!-- Campo de texto para ingresar datos -->
+            
+            <label for="id_password">Password</label>
+            <input type="password" id="id_password"> 
+            
+            <label for="id_fecha"> Fecha Nacimiento </label>
+            <input type="data" id="id_fecha"> 
+            
+            <label for="id_edad"> Edad </label>
+            <input type="number" id="id_edad">
+            <button> Guardar </button>
+
+        </form>
+
+        <!--MULTIMEDIA-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/800px-React-icon.svg.png" alt="No se puede visualizar" width="100" height="100" > 
+        
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+
+        <button> Aceptar </button>
+
+    </section>
+    <aside>  </aside>
+
+    <footer> 
+
+        <h3> Todos los Derechos Reservados </h6>
+        
+    </footer>
+
+
+</body> <!-- Construccion del body, estructura standar-->
+
 </html>
