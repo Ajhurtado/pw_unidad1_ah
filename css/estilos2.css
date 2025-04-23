@@ -1,0 +1,71 @@
+/*1. Universal*/
+/*Aplica a TODOS los elementos HTML, que tengan un sentido aplicarlos  */
+
+*{
+    color: blue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*2. Por tipo de Elemento HTML*/
+/*Poner el nombre del Elemento HTML*/
+
+h4 {
+    background-color: red;
+    font-size: 40px;
+}
+
+h5  {
+    background-color: green;
+    font-size: 10px;
+}
+
+/*3. Por clase*/
+/*Clase se refiere a un grupo, algo que yo quiero que se comporte de la misma manera todos los componentes de ese grupo*/
+
+.grupo1 {
+    background: yellow;
+    border: solid black 3px;
+}
+
+/*4. Por identificador*/
+/*Nos referimos a #NombreIdentificador*/
+
+#id_boton1 {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    /*border: solid red 5px;*/
+}
+
+/*5. Por atributo*/
+/*Nos referimos a [NombreAtributoSelecionar], combinado button[id]{}*/
+/*Aplica a todos los que tenga id*/
+[id]{
+    font-size: 50px;
+    border: solid yellow 10px;
+    border-radius: 20px;
+}
+
+img[alt="texto1"]{
+    width: 40px;
+    height: 50px;
+}
+/*Filtrar cierto tipo de contenido de la imagen*/
+img[src*=".png"]{
+    width: 40px;
+    height: 50px;
+}
+
+/*6. Por Pseudo Clase (eventos)*/
+
+i:hover {
+    color: darkblue;
+    font-size: 70px;
+}
+
+input:focus {
+    border-color: blueviolet;
+    background-color: red;
+}
