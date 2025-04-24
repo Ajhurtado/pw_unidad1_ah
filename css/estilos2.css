@@ -40,15 +40,15 @@ h5  {
 }
 
 /*5. Por atributo*/
-/*Nos referimos a [NombreAtributoSelecionar], combinado button[id]{}*/
+/*Nos referimos a [NombreAtributoSelecionar], combinado NOMBRE DEL ELEMENTO[NOMBREATRIBUTO ] - > button[id]{}*/
 /*Aplica a todos los que tenga id*/
-[id]{
+[id] {
     font-size: 50px;
     border: solid yellow 10px;
     border-radius: 20px;
 }
 
-img[alt="texto1"]{
+img[alt="texto1"] {
     width: 40px;
     height: 50px;
 }

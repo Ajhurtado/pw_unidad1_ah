@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Donde yo porgramo en js se llaman funciones-->
+    <script src="../js/calculadora.js"></script>
+    <script>
+        function cambiarColor(elemento, color) {
+            document.getElementById(elemento).style.color = color;
+        }
+
+        function agregarBoton(){
+            document.getElementById('id_espacio').innerHTML='<button>Agregado</button>';
+        }
+
+        function eliminar(idElemento){
+            document.getElementById(idElemento).remove();
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <header> 
+    </header> 
+
+    <nav>  </nav>
+
+    <section> 
+        <!--Debo tener un espacio para agregar un nuevo elemento del button, usamos el DIV-->
+       <div id="id_espacio" for=""></div>
+
+        <label id="id_label_1" for="id_numero_1">Número 1</label>
+       <input id="id_numero_1" type="number" >
+
+       <label id="id_label_2" for="id_numero_2">Número</label>
+       <input id="id_numero_2" type="number" >
+    
+
+        <button onclick=" cambiarColor('id_label_1', 'blue')" >Cambiar Color1</button>
+        <button onclick=" cambiarColor('id_label_2', 'yellow')" >Cambiar Color2</button>
+        
+        <button onclick="agregarBoton()"> Agregar elemento</button> 
+        <button id="id_error">Error</button>
+        <button onclick="eliminar('id_error')">Eliminar</button>
+
+    </section>
+
+    <aside>  </aside>
+
+    <footer>   
+    </footer>
+
+
+</body>
+</html>
