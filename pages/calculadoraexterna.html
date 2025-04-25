@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Para refrenciar un archivo js se usa el script-->
     <script src="../js/calculadora.js"></script>
 
 </head>
@@ -22,14 +23,14 @@
        <label id="id_label_2" for="id_numero_2">Número</label>
        <input id="id_numero_2" type="number" >
     
+       <p id="id_resultado">Resultado: </p>
 
-        <button onclick="document.getElementById('id_label_1').style.background='blue'">Cambiar Color</button>
-        <button onclick="document.getElementById('id_label_2').innerText='Número 2'">Cambiar Texto</button>
-        <button onclick="document.getElementById('id_label_1').style.fontSize = '40px'">Cambiar Tamaño</button>
-       
-        <button onclick="document.getElementById('id_concatenar').innerText = document.getElementById('id_label_1').innerText + document.getElementById('id_label_2').innerText">Concatenar</button>
+        <button onclick="evaluarOperacion('+')">Sumar</button>
+        <button onclick="evaluarOperacion('-')">Restar</button>
+        <button onclick="evaluarOperacion('*')">Multiplicar</button>
+        <button onclick="evaluarOperacion('/')">Dividir</button>
 
-        <label id="id_concatenar" for=""></label>
+        <button onclick="fundamentos()">Fundamentos de JS</button>
 
     </section>
 
@@ -39,6 +40,7 @@
       
     </footer>
 
+    
 
 </body>
 </html>
