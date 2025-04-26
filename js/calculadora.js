@@ -168,5 +168,175 @@ const fundamentos = () => {
 
     console.log([miProfesor2, miProfesor3]);
     console.table([miProfesor2, miProfesor3,miProfesor4]); 
+
+    /*Cuando manejamos objetos con atributos de tipo objeto */
+    /*Ejemplo Estudiante tiene objeto direccion */
+
+    const ciudadano={
+        nombre: 'Alexis',
+        apellido: 'Hurtado',
+        direccion:{
+            callePrincipal: 'Av. America',
+            calleSecuandaria: 'Av. La Gasca',
+            numeracion: '123',
+            barrio: {
+                referencia: 'Frente al dilipa',
+
+            }
+        }
+    }
+
+    console.log(ciudadano);
+    console.log(ciudadano.nombre); // Alexis
+    console.log(ciudadano.direccion); 
+    console.log(ciudadano.direccion.callePrincipal); // Av. America
+    ciudadano.direccion.callePrincipal='Av Amazonas';
+    console.log(ciudadano);
+
+    const es1={
+        nombre:'Alexis'
+    }
+    const es2={
+        nombre:'Jhoel'
+    }
+
+    const arregloEstudiantes=[es1, es2];
+    console.log(arregloEstudiantes); 
+
+    const arregloEstudiantes2=[
+        {
+            nombre:'Alexis', apellido:'Hurtado'
+        },
+        {
+            nombre:'Jhoel',apellido:'Pinán'
+        }
+    ]
+    console.log(arregloEstudiantes2);
+    console.log(arregloEstudiantes2[1].apellido); // Pinán
+
+
+    //Desestructuracion de arreglos
+    const colores=['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja'];
+    //Alias a cada posicion del arreglo
+    const [color1, color2, color3, color4, color5]=colores;
+    console.log(color1); // Amarillo
+    console.log(color5); // Naranja
+    
+    //No puedo poner el nombre de la variable que ya existe
+    const [c1, c2]=colores;
+    console.log(c1); // Amarillo
+    console.log(c2); // Azul
+
+    const [, ,c3]=colores;
+    console.log(c3); // Rojo
+
+    //Podemos hacerlo de manera directa
+    const [c01, c02]=['Amarillo', 'Azul', 'Rojo', 'Verde', 'Naranja'];
+
+    //Puedo desestructurar en cualquier parte del código un arreglo
+    desestructuracionArreglos(colores);
+
+    //No necesariamente necesito conocer, porque puedo imaginar una condicion
+    const [,p2,p3,p4,p5,p6,p7,p8,p9,p10] = desestructuracionArreglos2();
+    console.log(p2);// Azul
+    console.log(p3); // Rojo
+    console.log(p10); // undefined
+    
+
+    //Desestructuracion por operador REST
+    console.log('Desestructuracion por operador REST');
+    const [p1,...resto] =desestructuracionArreglos2(); // [ 'Azul', 'Rojo', 'Verde', 'Naranja' ]
+    console.log(p1); // Amarillo
+    console.log(resto); // [ 'Azul', 'Rojo', 'Verde', 'Naranja' ]
+
+
+
+    //Desestructuracion de objetos
+    const auto={
+        marca:'Toyota',
+        modelo:'Prius',
+        anio:2020,
+        color:'Amarillo'
+    }
+
+    const {marca,color,anio} =auto; 
+    console.log(marca); 
+
+    //En una sola linea
+    const {anio1}={
+        marca1:'Toyota',
+        modelo1:'Prius',
+        anio1:2020,
+        color1:'Amarillo'
+    }
+    console.log(anio1); // 2020
+    
+    //A traves de un metodo
+    desestructuracionObjeto(auto);// {marca:'Toyota', modelo:'Prius', anio:2020, color:'Amarillo'}
+
+    //Objeto con un atributo de tipo objeto
+    const universidad={
+        nombre:'UCE',
+        direccion:'Av. America',
+        rector:{
+            nombreR:'Alexis',
+            apellidoR:'Pinán',
+        }
+    }
+
+  
+    //Desestructurar el objeto
+    const {rector,nombreR}=universidad;
+    console.log(rector); // {nombre:'Alexis', apellido:'Pinán'}
+    const {apellidoR}=rector; // Pinán
+    console.log(apellidoR); // Pinán
+
+    //Desestructurar el objeto en una sola linea
+    const universidad2={
+        nombre2:'UCE',
+        direccion2:'Av. America',
+        rector2:{
+            nombreR2:'Alexis',
+            apellidoR2:'Pinán',
+        }
+    }
+
+    const {nombre2,rector2:{nombreR2}}=universidad2; 
+    console.log(nombreR2); // Alexis
+
+    //Desestructuracion por operador REST
+    const autoR={
+        marcaR:'Toyota',
+        modeloR:'Prius',
+        anioR:2020,
+        colorR:'Amarillo'
+    }
+
+    const {marcaR,...restoo}=autoR;
+    console.log(marcaR); // Toyota
+    console.log(restoo); // {modeloR:'Prius', anioR:2020, colorR:'Amarillo'}
+
+}
+
+
+function desestructuracionArreglos([color1,color2,color3]){
+    console.log(color1);
+    console.log(color2);
+    console.log(color3);
+}
+
+function desestructuracionArreglos2(){
+    const colores = ['Rosado','Azul','Rojo','Verde','Naranja'];
+    return colores
+}
+    
+function desestructuracionObjeto(objeto){
+    console.log(objeto);
+}
+
+//Si yo se que aqui va un objeto, puedo aplicar los valores de los atributos
+function desestructuracionObjeto({marca,color}){
+    console.log(marca);
+    console.log(color);
 }
 
