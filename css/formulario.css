@@ -1,0 +1,73 @@
+/*selector por clase*/
+/* Lo que si debe tener es PRINCIPAL display: flex
+justify-content, este centra horizontalmente los elementos
+align-items, este centra verticalmente los elementos
+los que son fijos son el display: flex*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+body {
+    background: #59abe3;
+}
+/*selector por psudo clase para textos*/
+
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 3px;
+    font-size: 18px;
+    color: #0989df;
+}
+
+input {
+    width: 250px;
+    border: none;
+    border-bottom: 2px solid #bebed2;
+    background: none;
+}
+
+/*selector pseudo clase*/
+input:focus {
+    outline: none;
+    border-bottom: 3px solid #5d5dcf;
+
+}
+
+h2, header {
+    margin: 10px 2px;
+    width: 180px;
+    color: #0c0c85;
+    border-bottom: 3px solid #0e92eb;
+}
+
+/*Algo especifico*/
+header {
+    font-size: 35px;
+    width: 260px;
+}
+
+/*Estilo a nuestro formulario*/
+.formulario {
+    border-radius: 10px;
+    background: #a8cbe2;
+    padding: 30px 25px;
+    box-shadow: 10px 10px #397196;
+}
+
+button {
+    background: #65acdb;
+    padding: 10px;
+    font-size: 15px;
+    color: #05619e;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.centra-boton {
+    display: flex;
+    justify-content: center;
+}
