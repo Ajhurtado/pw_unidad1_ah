@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.calculadora {
+    /* grid es para que esa secion se maneje como una cuadricula */
+    display: grid;
+    /*Tamaño(ancho) y # de columnas de mi grilla*/
+    grid-template-columns: 75px 75px 75px 75px ;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px;
+    padding: 20px;
+   /* border: 1px solid #000;*/
+    border-radius: 15px;
+    background: #975eda;
+    box-shadow: 15px 15px #640bca;
+}
+
+
+body {
+    background: #bc9ce0;
+ 
+}
+
+.display-calculadora {
+    /*ocupe todos los esapcios de la primera fila*/
+    grid-column: span 4;
+    text-align: right;
+    padding: 10px;
+    border: solid 2px #3b0579;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+button {
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 35px;
+    border: none;
+    background: #7b2cd4;
+    font-family: digital-7;
+    font-size: 25px;
+    color: white;
+    box-shadow: 2px 2px #3b0579;
+ 
+}
+
+.columna-2 {
+    grid-column: span 2;
+}
+
+button:active {
+    background: #9a69d1;
+ 
+}

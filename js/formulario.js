@@ -11,3 +11,5 @@ function validar(){
         console.log("Paso la validacion del nombre");
     }
 }
+
+
